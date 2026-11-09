@@ -18,3 +18,5 @@ jobs:
         run: uv sync
       - name: Run tests
         run: uv run coverage run --branch -m pytest
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
