@@ -20,3 +20,6 @@ jobs:
         run: uv run coverage run --branch -m pytest
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Run Pylint
+        run: uv run pylint src
